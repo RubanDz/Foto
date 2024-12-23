@@ -9,7 +9,7 @@
 }
 
    
-   .main {
+   /* .main {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/IMG_0316.JPG);
     background-size: cover;
     background-position: 50% 50%;
@@ -29,9 +29,45 @@
     100% {
         background-position: 60% 60%;
     }
+} */
+
+.main {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/IMG_0316.JPG);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: backgroundMove 10s infinite linear;
 }
 
-   
+@keyframes backgroundMove {
+    0% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 70% 70%; /* Увеличен диапазон перемещения */
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        animation: backgroundMoveMobile 10s infinite linear;
+    }
+
+    @keyframes backgroundMoveMobile {
+        0% {
+            background-position: 50% 50%;
+        }
+        100% {
+            background-position: 80% 80%; /* Более выраженное смещение для мобильных устройств */
+        }
+    }
+}
+
    
    
    

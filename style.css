@@ -51,7 +51,7 @@
 
    
    
-.main {
+/* .main {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/IMG_0316.JPG);
     background-size: cover;
     background-position: 50% 50%;
@@ -71,7 +71,7 @@
     }
     100% {
         background-position: 70% 70%;
-        transform: scale(1.1);  /* увеличение фона */
+        transform: scale(1.1);  
     }
 }
 
@@ -87,14 +87,82 @@
         }
         100% {
             background-position: 90% 90%;
-            transform: scale(1.1);  /* увеличение фона */
+            transform: scale(1.1);  
         }
     }
-}
+} */
 
    
    
    
+
+
+
+.main {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/IMG_0316.JPG);
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: backgroundMove 10s infinite ease-in-out; /* добавлен ease-in-out */
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 50% 50%;
+        transform: scale(1);
+    }
+    25% {
+        background-position: 60% 60%;
+        transform: scale(1.05);
+    }
+    50% {
+        background-position: 70% 70%;
+        transform: scale(1.1);  /* увеличение фона */
+    }
+    75% {
+        background-position: 60% 60%;
+        transform: scale(1.05);
+    }
+    100% {
+        background-position: 50% 50%;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        animation: backgroundMoveMobile 10s infinite ease-in-out; /* добавлен ease-in-out */
+    }
+
+    @keyframes backgroundMoveMobile {
+        0% {
+            background-position: 50% 50%;
+            transform: scale(1);
+        }
+        25% {
+            background-position: 70% 70%;
+            transform: scale(1.05);
+        }
+        50% {
+            background-position: 90% 90%;
+            transform: scale(1.1);  /* увеличение фона */
+        }
+        75% {
+            background-position: 70% 70%;
+            transform: scale(1.05);
+        }
+        100% {
+            background-position: 50% 50%;
+            transform: scale(1);
+        }
+    }
+}
+
    
    
    

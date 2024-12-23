@@ -9,7 +9,10 @@
 }
 
    
-   /* .main {
+ 
+
+
+/* .main {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/IMG_0316.JPG);
     background-size: cover;
     background-position: 50% 50%;
@@ -27,11 +30,27 @@
         background-position: 50% 50%;
     }
     100% {
-        background-position: 60% 60%;
+        background-position: 70% 70%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        animation: backgroundMoveMobile 10s infinite linear;
+    }
+
+    @keyframes backgroundMoveMobile {
+        0% {
+            background-position: 50% 50%;
+        }
+        100% {
+            background-position: 90% 90%; 
+        }
     }
 } */
 
-
+   
+   
 .main {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(image/IMG_0316.JPG);
     background-size: cover;
@@ -48,9 +67,11 @@
 @keyframes backgroundMove {
     0% {
         background-position: 50% 50%;
+        transform: scale(1);
     }
     100% {
-        background-position: 70% 70%; /* Увеличен диапазон для десктопов */
+        background-position: 70% 70%;
+        transform: scale(1.1);  /* увеличение фона */
     }
 }
 
@@ -62,16 +83,15 @@
     @keyframes backgroundMoveMobile {
         0% {
             background-position: 50% 50%;
+            transform: scale(1);
         }
         100% {
-            background-position: 90% 90%; /* Максимальное смещение для мобильных устройств */
+            background-position: 90% 90%;
+            transform: scale(1.1);  /* увеличение фона */
         }
     }
 }
 
-   
-   
-   
    
    
    
